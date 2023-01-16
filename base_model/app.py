@@ -37,6 +37,7 @@ def main():
     with predict_sum:
         if news != "":
             summary = helper.predict_summary(model, tokenizer, news)
+            summary = str(summary[0]['summary_text'])
 
     with output_sum:
         if summary != "":
